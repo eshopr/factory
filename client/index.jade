@@ -11,6 +11,7 @@ html(lang='en', data-ng-app='eshoprShop')
         link(href="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js", rel="stylesheet")
         //- link(href="/views/partials/page/ngview-animate.css", rel="stylesheet")
         //- link(href="/views/partials/partials.css", rel="stylesheet")
+        //- link(href="/js/graphs/graphs.css", rel="stylesheet")
         link(href="/recipes/recipes.css", rel="stylesheet")
         link(href="/components/theme.css", rel="stylesheet")
 
@@ -75,7 +76,7 @@ html(lang='en', data-ng-app='eshoprShop')
         script(src='/components/jQuery/dist/jquery.js')
         script(src='/components/gsap/src/uncompressed/TimelineMax.js')
         script(src='/components/gsap/src/uncompressed/TweenMax.js')
-        script(src='/components/flot/jquery.flot.js')
+        script(src='/js/graphs/jquery.flot.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.5.4/bootstrap-select.min.js')
         script(src='/js/routingConfig.js')
         script(src='/js/app.js')
@@ -132,6 +133,8 @@ html(lang='en', data-ng-app='eshoprShop')
         script(type="text/ng-template", id="recipes/recipe")
             include views/partials/recipes/recipe
         script(type="text/ng-template", id="recipes/add")
-            include views/partials/recipes/add
+            include views/partials/recipes/add        
+        script(type="text/ng-template", id="graphs/plot1")
+            include views/partials/graphs/plot1
 
 

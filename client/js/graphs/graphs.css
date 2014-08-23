@@ -1,0 +1,10 @@
+body {
+	background:green !important;
+
+
+}
+
+#plot-one {
+	background:pink;
+	height:500px; width:700px;
+}

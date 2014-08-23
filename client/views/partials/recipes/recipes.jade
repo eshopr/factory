@@ -4,8 +4,6 @@ h3 of indivual
 h1 recipes
 #placeholder
 
-chart(ng-controller graphdata="[[0, 3], [4, 8], [8, 5], [9, 13]]" graphheight="400" graphopts="{{graphOpts}}")
-
 article.listview(ng-repeat="recipe in recipes")
     h3 {{recipe.name}}
     h5 Created by {{recipe.owner}}

@@ -13,14 +13,6 @@ recipesController.controller('recipesController', function(
   $scope.recipes = {};
   $scope.ingredients = {};
 
-  $scope.graphOpts = {
-    lines: { show: true },
-    colors:[ '#0055CC', '#078600', '#6e0069', '#ff8900' ],
-  };
-
-  $scope.graphHeight = '400px';
-
-  $scope.graphData = [[0, 3], [4, 8], [8, 5], [9, 13]];
   // $scope.bom = [{
   //   "id": "Material",
   //   "value": "select a value" 
@@ -40,8 +32,6 @@ recipesController.controller('recipesController', function(
       console.log(response)
         $scope.recipes = response.data;
     });
-
-  // returns flot object (placeholder, data, options)
   }
   init();
 

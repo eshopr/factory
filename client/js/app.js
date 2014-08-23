@@ -20,7 +20,8 @@ var eshoprShop = angular.module('eshoprShop', [
     'pageController',
     'clockController',
     'recipesController',
-    'graphsController'
+    'graphsController',
+    'graphsDirective',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -94,7 +95,7 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
         // Register
         .state('anon.recipes', {
             url: '/recipes/',
-            templateUrl: 'recipes/recipes',
+            templateUrl: 'graphs/plot1',
             controller: 'graphsController'
         })
         // Recipe
