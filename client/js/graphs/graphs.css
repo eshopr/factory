@@ -4,7 +4,7 @@ body {
 
 }
 
-#plot-one {
+#plot-one, .plotarea {
 	background:pink;
 	height:500px; width:700px;
 }
