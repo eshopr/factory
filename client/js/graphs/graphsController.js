@@ -323,8 +323,6 @@ $scope.responses =[
     {"id":"4", "value" : "Sub o ora pe zi"},
     {"id":"5", "value" : "1-3 ore zilnic"},
     {"id":"6", "value" : "Peste 3 ore zilnic"},
-    {"id":"98", "value" : "NS"},
-    {"id":"99", "value" : "NR"}
    ]
   },
   {
@@ -337,8 +335,6 @@ $scope.responses =[
     {"id":"4", "value" : "Sub o ora pe zi"},
     {"id":"5", "value" : "1-3 ore zilnic"},
     {"id":"6", "value" : "Peste 3 ore zilnic"},
-    {"id":"98", "value" : "NS"},
-    {"id":"99", "value" : "NR"}
    ]
   },
   {
@@ -351,8 +347,6 @@ $scope.responses =[
     {"id":"4", "value" : "Sub o ora pe zi"},
     {"id":"5", "value" : "1-3 ore zilnic"},
     {"id":"6", "value" : "Peste 3 ore zilnic"},
-    {"id":"98", "value" : "NS"},
-    {"id":"99", "value" : "NR"}
    ]
   },
   {
@@ -365,8 +359,6 @@ $scope.responses =[
     {"id":"4", "value" : "Sub o ora pe zi"},
     {"id":"5", "value" : "1-3 ore zilnic"},
     {"id":"6", "value" : "Peste 3 ore zilnic"},
-    {"id":"98", "value" : "NS"},
-    {"id":"99", "value" : "NR"}
    ]
   },
   {
@@ -379,8 +371,6 @@ $scope.responses =[
     {"id":"4", "value" : "Sub o ora pe zi"},
     {"id":"5", "value" : "1-3 ore zilnic"},
     {"id":"6", "value" : "Peste 3 ore zilnic"},
-    {"id":"98", "value" : "NS"},
-    {"id":"99", "value" : "NR"}
    ]
   },
   {
@@ -393,8 +383,6 @@ $scope.responses =[
     {"id":"4", "value" : "Sub o ora pe zi"},
     {"id":"5", "value" : "1-3 ore zilnic"},
     {"id":"6", "value" : "Peste 3 ore zilnic"},
-    {"id":"98", "value" : "NS"},
-    {"id":"99", "value" : "NR"}
    ]
   }
 ];

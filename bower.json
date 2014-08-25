@@ -10,7 +10,8 @@
     "font-awesome": "~4.0.3",
     "angular-cookies": "~1.2.12",
     "jQuery":"",
-    "gsap":"1.13.1"
+    "gsap":"1.13.1",
+    "angular-ui-chart": "latest"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.12"

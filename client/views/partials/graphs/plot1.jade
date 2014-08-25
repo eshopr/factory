@@ -2,10 +2,15 @@ h1 Make it better
 ul(ng-repeat="question in questions")
 	li {{question.label}} [{{question.name}}]
 		ul(ng-repeat="answer in question.questions")
-			li(ng-repeat="response in responses") {{response.questions}}
-				ul(ng-repeat="answer in response.questions")
-					li(ng-if="answer.id === question.name") {{answer.value}}
-
+			li {{answer.value}} [{{answer.id}}]
+				ul(ng-repeat="response in responses") 
+					li 
+						ul(ng-repeat="choice in response.questions") 
+							div(ng-if="choice.id === question.name") 
+								div(ng-if="choice.value === answer.id")
+									it works
+				
+						
 
 
 chart(tstvalue="red")
