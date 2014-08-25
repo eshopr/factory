@@ -59,7 +59,11 @@ html(lang='en', data-ng-app='eshoprShop')
 
         .footer
             .row
-                .col-md-12                        
+                .col-md-12 
+                    div(ng-controller="questionsController")
+                        {{questions}}   {{foo}} yuiy
+
+                       
                     h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
         // Development
@@ -91,6 +95,8 @@ html(lang='en', data-ng-app='eshoprShop')
         script(src='/js/recipes/recipesController.js')
         script(src='/js/graphs/graphsDirective.js')
         script(src='/js/graphs/graphsController.js')
+        script(src='/js/graphs/questionsController.js')
+        script(src='/js/graphs/responseController.js')
 
 
 

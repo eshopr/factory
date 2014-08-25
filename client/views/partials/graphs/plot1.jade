@@ -1,60 +1,14 @@
-h1 plot1.jade
+h1 Make it better
+ul(ng-repeat="question in questions")
+	li {{question.label}}
+		ul(ng-repeat="answer in question.questions")
+			{{answer}}
+
+div(ng-controller="questionsController")
+	{{tfo}}
 
 
 
-input(type="text" ng-model="color" placeholder="Enter a color")
-chart#plot-one 
+chart(tstvalue="red")
 
-chart
 
-#plotarea
-    table.table.table-striped
-        //caption GDP, based on exchange rates, over time. Values in billion USDs.
-        tr
-            td 
-            th(scope="col") 2003
-            th(scope="col") 2002
-            th(scope="col") 2001
-            th(scope="col") 2000
-            th(scope="col") 1999
-            th(scope="col") 1998
-        tr
-            th(scope="row") USA
-            td 10,882
-            td 10,383
-            td 10,020
-            td 9,762
-            td 9,213
-            td 8,720
-        tr
-            th(scope="row") EU
-            td 10,970
-            td 9,040
-            td 8,303
-            td 8,234
-            td 8,901
-            td 8,889
-        tr
-            th(scope="row") UK
-            td 1,765
-            td 1,564
-            td 1,430
-            td 1,438
-            td 1,460
-            td 1,423
-        tr
-            th(scope="row") China
-            td 1,575
-            td 1,434
-            td 1,345
-            td 1,252
-            td 1,158
-            td 1,148
-           tr
-            th(scope="row") India
-            td 599
-            td 510
-            td 479
-            td 457
-            td 447
-            td 414

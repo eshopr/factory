@@ -22,6 +22,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'recipesController',
     'graphsController',
     'graphsDirective',
+    'questionsController',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
