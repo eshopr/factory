@@ -1,11 +1,10 @@
 h1 Make it better
 ul(ng-repeat="question in questions")
-	li {{question.label}}
+	li {{question.label}} [{{question.name}}]
 		ul(ng-repeat="answer in question.questions")
-			{{answer}}
-
-div(ng-controller="questionsController")
-	{{tfo}}
+			li(ng-repeat="response in responses") {{response.questions}}
+				ul(ng-repeat="answer in response.questions")
+					li(ng-if="answer.id === question.name") {{answer.value}}
 
 
 

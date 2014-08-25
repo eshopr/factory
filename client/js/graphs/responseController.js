@@ -12,14 +12,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"4",
-		"A1P3":"3",
-		"A1P4":"4",
-		"A1P5":"5",
-		"A1P6":"5"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"4"},
+		{"id":"A1P3","value":"3"},
+		{"id":"A1P4","value":"4"},
+		{"id":"A1P5","value":"5"},
+		{"id":"A1P6","value":"5"}
+		]
 	},
 	{
 	"BARCODE":"2000169602",
@@ -29,14 +29,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"4",
-		"A1P3":"1",
-		"A1P4":"3",
-		"A1P5":"1",
-		"A1P6":"5"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"4"},
+		{"id":"A1P3","value":"1"},
+		{"id":"A1P4","value":"3"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"5"}
+		]
 	},
 	{
 	"BARCODE":"2000169603",
@@ -46,14 +46,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"6",
-		"A1P3":"4",
-		"A1P4":"5",
-		"A1P5":"3",
-		"A1P6":"5"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"4"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"3"},
+		{"id":"A1P6","value":"5"}
+		]
 	},
 	{
 	"BARCODE":"2000169604",
@@ -63,14 +63,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"5",
-		"A1P3":"5",
-		"A1P4":"3",
-		"A1P5":"5",
-		"A1P6":"4"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"5"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"3"},
+		{"id":"A1P5","value":"5"},
+		{"id":"A1P6","value":"4"}
+		]
 	},
 	{
 	"BARCODE":"2000169605",
@@ -80,14 +80,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"6",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"4",
-		"A1P6":"1"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"4"},
+		{"id":"A1P6","value":"1"}
+		]
 	},
 	{
 	"BARCODE":"2000169606",
@@ -97,14 +97,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"6",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"1",
-		"A1P6":"4"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"4"}
+		]
 	},
 	{
 	"BARCODE":"2000169607",
@@ -114,14 +114,14 @@ $scope.responses =[
 	"weight_total":"1",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"2",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"6",
-		"A1P6":"1"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"2"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"6"},
+		{"id":"A1P6","value":"1"}
+		]
 	},
 	{
 	"BARCODE":"2000169608",
@@ -131,14 +131,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"6",
-		"A1P3":"6",
-		"A1P4":"5",
-		"A1P5":"2",
-		"A1P6":"2"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"6"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"2"},
+		{"id":"A1P6","value":"2"}
+		]
 	},
 	{
 	"BARCODE":"2000169609",
@@ -148,14 +148,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"6",
-		"A1P3":"5",
-		"A1P4":"3",
-		"A1P5":"3",
-		"A1P6":"1"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"3"},
+		{"id":"A1P5","value":"3"},
+		{"id":"A1P6","value":"1"}
+		]
 	},
 	{
 	"BARCODE":"2000169610",
@@ -165,14 +165,14 @@ $scope.responses =[
 	"weight_total":"1",
 	"weight_cccdc":"2",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"3",
-		"A1P3":"4",
-		"A1P4":"2",
-		"A1P5":"1",
-		"A1P6":"5"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"3"},
+		{"id":"A1P3","value":"4"},
+		{"id":"A1P4","value":"2"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"5"}
+		]
 	},
 	{
 	"BARCODE":"3000169601",
@@ -182,14 +182,14 @@ $scope.responses =[
 	"weight_total":"1",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"4",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"2",
-		"A1P6":"3"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"4"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"2"},
+		{"id":"A1P6","value":"3"}
+		]
 	},
 	{
 	"BARCODE":"3000169602",
@@ -199,14 +199,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"3",
-		"A1P3":"4",
-		"A1P4":"5",
-		"A1P5":"9",
-		"A1P6":"3"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"3"},
+		{"id":"A1P3","value":"4"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"9"},
+		{"id":"A1P6","value":"3"}
+		]
 	},
 	{
 	"BARCODE":"3000169603",
@@ -216,14 +216,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"4",
-		"A1P3":"5",
-		"A1P4":"1",
-		"A1P5":"1",
-		"A1P6":"5"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"4"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"1"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"5"}
+		]
 	},
 	{
 	"BARCODE":"3000169604",
@@ -233,14 +233,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"5",
-		"A1P2":"6",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"3",
-		"A1P6":"4"
-		}
+	"questions":[
+		{"id":"A1P1","value":"5"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"3"},
+		{"id":"A1P6","value":"4"}
+		]
 	},
 	{
 	"BARCODE":"3000169605",
@@ -250,14 +250,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"0",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"4",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"3",
-		"A1P6":"4"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"4"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"3"},
+		{"id":"A1P6","value":"4"}
+		]
 	},
 	{
 	"BARCODE":"3000169606",
@@ -267,14 +267,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"6",
-		"A1P3":"6",
-		"A1P4":"5",
-		"A1P5":"1",
-		"A1P6":"1"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"6"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"1"}
+		]
 	},
 	{
 	"BARCODE":"3000169607",
@@ -284,14 +284,14 @@ $scope.responses =[
 	"weight_total":"1",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"6",
-		"A1P3":"6",
-		"A1P4":"5",
-		"A1P5":"1",
-		"A1P6":"4"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"6"},
+		{"id":"A1P3","value":"6"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"4"}
+		]
 	},
 	{
 	"BARCODE":"3000169608",
@@ -301,14 +301,14 @@ $scope.responses =[
 	"weight_total":"0",
 	"weight_cccdc":"1",
 	"esant_buc":"0",
-	"questions":{
-		"A1P1":"6",
-		"A1P2":"2",
-		"A1P3":"5",
-		"A1P4":"5",
-		"A1P5":"1",
-		"A1P6":"5"
-		}
+	"questions":[
+		{"id":"A1P1","value":"6"},
+		{"id":"A1P2","value":"2"},
+		{"id":"A1P3","value":"5"},
+		{"id":"A1P4","value":"5"},
+		{"id":"A1P5","value":"1"},
+		{"id":"A1P6","value":"5"}
+		]
 	}
 ];
 
