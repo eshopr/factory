@@ -312,7 +312,7 @@ $scope.responses =[
   }
 ];
 
-  $scope.questions = [
+$scope.questions = [
   {
    "name": "A1P1",
    "label":"De obicei, cat de des/ mult… ? Va uitati la televizor",
