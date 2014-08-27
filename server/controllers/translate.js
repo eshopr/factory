@@ -32,4 +32,4 @@ module.exports = {
 }
 
 
-curl -H "Authorization: ##### username: binarygeometry" -H "Content-Type: application/json" -X POST http://www.unbabel.co/tapi/v2/translation/ 
+// curl -H "Authorization: ##### username: binarygeometry" -H "Content-Type: application/json" -X POST http://www.unbabel.co/tapi/v2/translation/ 

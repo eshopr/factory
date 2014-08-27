@@ -2,7 +2,7 @@ doctype html
 html(lang='en', data-ng-app='eshoprShop')
     head
         meta(charset='utf-8')
-        title Angular Auth Example
+        title Not Cookied API
         //- link(rel='stylesheet', href='/css/app.css')
         link(href="/components/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
         link(href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.5.4/bootstrap-select.min.css", rel="stylesheet")
@@ -14,6 +14,9 @@ html(lang='en', data-ng-app='eshoprShop')
         link(href="/js/graphs/graphs.css", rel="stylesheet")
         link(href="/recipes/recipes.css", rel="stylesheet")
         link(href="/components/theme.css", rel="stylesheet")
+
+        // Blog Plugin
+        link(href="/js/blog/blog.css", rel="stylesheet")
 
         // This is needed because Facebook login redirects add #_=_ at the end of the URL
         script(type="text/javascript").
@@ -59,11 +62,7 @@ html(lang='en', data-ng-app='eshoprShop')
 
         .footer
             .row
-                .col-md-12 
-                    div(ng-controller="questionsController")
-                        {{questions}}   {{foo}} yuiy
-
-                       
+                .col-md-12                     
                     h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
         // Development
@@ -97,6 +96,9 @@ html(lang='en', data-ng-app='eshoprShop')
         script(src='/js/graphs/graphsController.js')
         script(src='/js/graphs/questionsController.js')
         script(src='/js/graphs/responseController.js')
+        // Blog Plugin
+        script(src='/js/blog/admin/adminBlogController.js')
+        script(src='/js/blog/public/publicBlogController.js')
 
 
 
@@ -142,5 +144,7 @@ html(lang='en', data-ng-app='eshoprShop')
             include views/partials/recipes/add        
         script(type="text/ng-template", id="graphs/plot1")
             include views/partials/graphs/plot1
-
+        // Blog Plugin
+        script(type="text/ng-template", id="blog/public/blog")
+            include views/partials/blog/public/blog
 

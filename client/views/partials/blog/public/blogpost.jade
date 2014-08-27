@@ -1,0 +1,36 @@
+.blog-post
+	h1.blog-post-title Create new files
+
+	link(href="/blog/blog.css", rel="stylesheet")
+	
+	script(src='/js/blog/admin/adminBlogController.js')
+    script(src='/js/blog/public/publicBlogController.js')
+
+	script(type="text/ng-template", id="blogpublic/blog")
+        include views/partials/blog/public/blog
+    script(type="text/ng-template", id="blogpublic/blog")
+        include views/partials/blog/public/blog
+
+    add the files to index.jade
+
+    pass the public controller as a dependancy of the main app
+
+    var eshoprShop = angular.module('eshoprShop', [
+    'publicBlogController',
+    ]);
+
+    create a new state provider instance within the app routing config
+
+    // Blog Routes
+    $stateProvider
+        .state('anon.blog')
+            url: '/blog',
+            templateUrl: 'blog/public/blog',
+            controller: 'publicBlogController'
+        });
+
+    if your typing this out by hand, you will probably encounter a 'Resource interpreted as Stylesheet but transferred with MIME type text/html' error
+
+    
+
+

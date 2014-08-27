@@ -23,6 +23,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'graphsController',
     'graphsDirective',
     'questionsController',
+    'publicBlogController',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -106,7 +107,15 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             controller: function($scope, $stateParams) {
                 $scope.foo = $stateParams.recipe_id;
             }
-        })
+        });
+
+    // Blog Routes
+    $stateProvider
+        .state('anon.blog', {
+            url: '/blog',
+            templateUrl: 'blog/public/blog',
+            controller: 'publicBlogController'
+        });
 
     // Regular user routes
     $stateProvider
