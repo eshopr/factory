@@ -4,6 +4,7 @@ var _ =           require('underscore')
     , mongoose =  require('mongoose')
     , AuthCtrl =  require('./controllers/auth')
     , UserCtrl =  require('./controllers/user')
+    , TransCtrl =      require('./controllers/translate.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
     , accessLevels = require('../client/js/routingConfig').accessLevels;
@@ -34,6 +35,7 @@ var routes = [
             res.render(requestedView);
         }]
     },
+
 
     // API
     {
@@ -208,6 +210,20 @@ var routes = [
                         res.send(err);
                     res.json(recipe);
             });
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/translate',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            var thing = 'thing';
+            var wob = TransCtrl.translate(thing);
+
+            // var requestedView = path.join('./', req.url);
+            res.send(wob);
+            // res.render(requestedView);
         }],
         accessLevel: accessLevels.public
     },
