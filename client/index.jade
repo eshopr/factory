@@ -25,33 +25,9 @@ html(lang='en', data-ng-app='eshoprShop')
             }
     body(data-ng-cloak)
 
-        .navbar(data-ng-controller="NavCtrl")
-            .navbar-inner
-                .container-fluid
-                    ul.nav.nav-tabs
-                        li(data-access-level='accessLevels.anon', active-nav)
-                            a(href='/login') Log in
-                        li(data-access-level='accessLevels.anon', active-nav)
-                            a(href='/register') Register
-                        li(data-access-level='accessLevels.anon', active-nav)
-                            a(href='/') Home
-                        li(data-access-level='accessLevels.anon', active-nav)
-                            a(href='/recipes') Recipes
-                        li(data-access-level='accessLevels.anon', active-nav='nestedTop')
-                            a(href='/private') Private
-                        li(data-access-level='accessLevels.admin', active-nav)
-                            a(href='/admin') Admin
-                        li(data-access-level='accessLevels.admin', active-nav)
-                            a(href='/admin') Admin
 
-                        div#userInfo.pull-right(data-access-level='accessLevels.anon')
-                            | Welcome&nbsp;
-                            strong {{ user.username }}&nbsp;
-                            span.label(data-ng-class='{"label-info": user.role.title == userRoles.user.title, "label-success": user.role.title == userRoles.admin.title}') {{ user.role.title }}
-                            a(href="", data-ng-click="logout()")
-                                | Log out
+        shopheader
 
-        
         .container.fluid
             .main-view(data-ui-view autoscroll="false")
 
@@ -60,10 +36,7 @@ html(lang='en', data-ng-app='eshoprShop')
             strong Oh no!&nbsp;
             span(data-ng-bind="error")
 
-        .footer
-            .row
-                .col-md-12                     
-                    h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        shopfooter
 
         // Development
         script(src='/components/angular/angular.js')
@@ -99,9 +72,18 @@ html(lang='en', data-ng-app='eshoprShop')
         // Blog Plugin
         script(src='/js/blog/admin/adminBlogController.js')
         script(src='/js/blog/public/publicBlogController.js')
+        // Header
+        script(src='/js/header/headerDirective.js')
+        // Footer
+        script(src='/js/footer/footerDirective.js')
 
 
 
+
+        script(type="text/ng-template", id="header/header")
+            include views/partials/header/header
+        script(type="text/ng-template", id="footer/footer")
+            include views/partials/footer/footer
 
         // Partial views... Load up front to make transitions smoother
         script(type="text/ng-template", id="404")
@@ -146,5 +128,5 @@ html(lang='en', data-ng-app='eshoprShop')
             include views/partials/graphs/plot1
         // Blog Plugin
         script(type="text/ng-template", id="blog/public/blog")
-            include views/partials/blog/public/blog
+            include views/partials/blog/blog
 

@@ -29,8 +29,17 @@
             controller: 'publicBlogController'
         });
 
-    if your typing this out by hand, you will probably encounter a 'Resource interpreted as Stylesheet but transferred with MIME type text/html' error
+    If you're typing this out by hand, you will probably encounter a 'Resource interpreted as Stylesheet but transferred with MIME type text/html' error. This usually means you have
+    gotten the file path incorrect for the location of your files, or else you have created
+    the files to be included with the wrong permissions and the web server does not have 
+    access to them.
+
+    It's worth noting that the format of script(type="text/ng-template", id="blog/blog") when preloading the jade templates in the index.html file, that the id here, should be an indentical string to the one used to call the template from the state provider in app.js.
+    It essentially acts as a key linking the template engine output to the stateprovider argument. The practical outcome of this is that you can change the template path in the index file without having to modify the controller.
+
 
     
+
+
 
 

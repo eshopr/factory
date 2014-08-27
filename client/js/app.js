@@ -1,15 +1,6 @@
 'use strict';
 
-// .directive('shopheader', function() {
-//     return {
-//       templateUrl: 'header.html'
-//     };
-// })
-// .directive('shopfooter', function() {
-//     return {
-//       templateUrl: 'footer.html'
-//     };
-// });
+
 
 var eshoprShop = angular.module('eshoprShop', [
     'ngCookies', 
@@ -24,6 +15,8 @@ var eshoprShop = angular.module('eshoprShop', [
     'graphsDirective',
     'questionsController',
     'publicBlogController',
+    'headerDirective',
+    'footerDirective',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
