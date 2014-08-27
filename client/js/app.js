@@ -15,6 +15,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'graphsDirective',
     'questionsController',
     'publicBlogController',
+    'sidebarBlogController',
     'headerDirective',
     'footerDirective',
     ]);
@@ -105,9 +106,23 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
     // Blog Routes
     $stateProvider
         .state('anon.blog', {
-            url: '/blog',
+            url: '/blog/',
             templateUrl: 'blog/public/blog',
             controller: 'publicBlogController'
+        })
+        .state('anon.blog.post', {
+            url: 'post/', 
+            // note how it begins with no slash for follow from its ancestor /blog/
+            controller: 'publicBlogController',
+            views: {
+                'main': {
+                    controller: 'sidebarBlogController'
+                },
+                'sidebar': {
+                    template: '<h3>sidebar</h3><p>one</p><p>two</p><p>three</p>'
+                    // templateUrl: 'blog/public/sidebar',
+                }
+            }
         });
 
     // Regular user routes

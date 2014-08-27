@@ -1,12 +1,1 @@
-h2 blog.jade
-
-p A really useful thing to do would be to add a link to the site header so that we can quickly access our blog page.
-
-p First off though, it's a good idea to move our header and footer outside of index.html into their own files. This helps as it allows us to use the index file as a manifest of our our included parts and leave the display of these parts to their own view. the restrict: 'E' option means that our 'element' shopfooter
-will be registered (as opposed to retrict: "A" <div shopfooter>) as a custom dom element with it's own name. Finally we have replace: 'true', which means the return content from directive will replace the existing content instead of placing the content inside the element
-
-This is great, because it means you can have <my-wacky-element> render to correct html5 <div class="my-wacky-element"> for instance.
-
- 
-
 
