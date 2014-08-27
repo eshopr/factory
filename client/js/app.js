@@ -15,6 +15,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'graphsDirective',
     'questionsController',
     'publicBlogController',
+    'adminBlogController',
     'sidebarBlogController',
     'headerDirective',
     'footerDirective',
@@ -124,8 +125,12 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
                     // templateUrl: 'blog/public/sidebar',
                 }
             }
-        });
-
+        })
+        .state('user.private.write', {
+            url: 'write/',
+            controller: 'adminBlogController',
+            templateUrl: 'blog/admin/write'
+        })
     // Regular user routes
     $stateProvider
         .state('user', {
@@ -158,11 +163,6 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             url: 'cupboard/',
             templateUrl: 'private/cupboard',
             controller: 'cupboardController'
-        })
-        // Private Write
-        .state('user.private.write', {
-            url: 'write/',
-            templateUrl: 'private/write'
         })
         // Private Admin
         .state('user.private.admin', {

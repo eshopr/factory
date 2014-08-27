@@ -5,19 +5,11 @@ var _ =           require('underscore')
     , AuthCtrl =  require('./controllers/auth')
     , UserCtrl =  require('./controllers/user')
     , TransCtrl = require('./controllers/translate.js')
+    , PostCtrl = require('./controllers/blog/post.js')
     , IngredientCtrl = require('./controllers/ingredient.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
     , accessLevels = require('../client/js/routingConfig').accessLevels;
-
-// define model =================
-// var Ingredient = mongoose.model('Ingredient', {
-//     sku : String,
-//     productName : String,
-//     price : String,
-//     inventory : String,
-//     image: String,
-// });
 
 var Recipe = mongoose.model('Recipe', {
     name : String,
@@ -25,11 +17,6 @@ var Recipe = mongoose.model('Recipe', {
     bom: [{material_id:String, quantity:String, active:String}],
 });
 
-var Post = mongoose.model("Post", {
-    title : String,
-    slug : String,
-    body : String,
-});
 
 var routes = [
 
@@ -55,7 +42,44 @@ var routes = [
         }],
         accessLevel: accessLevels.public
     },
+    //### POSTS  ####
 
+    // Return all posts
+    {
+        path: '/api/posts',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            PostCtrl.getPosts(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+    // Create a new post
+    {
+        path: '/api/posts',
+        httpMethod: 'POST',
+        middleware: [function (req, res) {
+            PostCtrl.addPost(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/posts/:post_id',
+        httpMethod: 'DELETE',
+        middleware: [function (req, res) {
+            PostCtrl.deletePost(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/posts/:post_id',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+
+        }],
+        accessLevel: accessLevels.public
+    },
     //### INGREDIENTS  ####
 
     // Return all ingredients

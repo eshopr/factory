@@ -47,3 +47,27 @@ eshoprShop.factory("RecipeFactory", function($http,$resource) {
   };
   return factory
 });
+
+eshoprShop.factory("PostFactory", function($http,$resource) {
+  var factory = {};
+  var url = "/api/posts";
+
+  factory.getPosts = function () {
+    return $http.get(url);
+  };
+  factory.showPost = function (id) {
+    return $http.get(url + '/' + id);
+  };
+  factory.insertPost = function (dataObject) {
+    console.log(dataObject);
+    return $http.post(url, dataObject);
+  };
+  // factory.updatePost = function (id, dataObject) {
+  //   return $http.put(url + '/' + cust.ID, cust)
+  // };
+
+  factory.deletePost = function (id) {
+        return $http.delete(url + '/' + id);
+  };
+  return factory
+});
