@@ -110,16 +110,17 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             templateUrl: 'blog/public/blog',
             controller: 'publicBlogController'
         })
-        .state('anon.blog.post', {
-            url: 'post/', 
+        .state('anon.blog.posts', {
+            url: 'posts/', 
             // note how it begins with no slash for follow from its ancestor /blog/
             controller: 'publicBlogController',
             views: {
                 'main': {
-                    controller: 'sidebarBlogController'
+                    template: '<h3>sidebar</h3><p>one</p><p>two</p><p>three</p>'
                 },
                 'sidebar': {
-                    template: '<h3>sidebar</h3><p>one</p><p>two</p><p>three</p>'
+                    templateUrl: 'blog/public/sidebar',
+                    controller: 'publicBlogController'
                     // templateUrl: 'blog/public/sidebar',
                 }
             }
