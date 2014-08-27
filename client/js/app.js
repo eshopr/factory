@@ -116,7 +116,7 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             controller: 'publicBlogController',
             views: {
                 'main': {
-                    template: '<h3>sidebar</h3><p>one</p><p>two</p><p>three</p>'
+                    templateUrl: 'blog/public/list',
                 },
                 'sidebar': {
                     templateUrl: 'blog/public/sidebar',

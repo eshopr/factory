@@ -5,23 +5,30 @@ var _ =           require('underscore')
     , AuthCtrl =  require('./controllers/auth')
     , UserCtrl =  require('./controllers/user')
     , TransCtrl = require('./controllers/translate.js')
+    , IngredientCtrl = require('./controllers/ingredient.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
     , accessLevels = require('../client/js/routingConfig').accessLevels;
 
 // define model =================
-var Ingredient = mongoose.model('Ingredient', {
-    sku : String,
-    productName : String,
-    price : String,
-    inventory : String,
-    image: String,
-});
+// var Ingredient = mongoose.model('Ingredient', {
+//     sku : String,
+//     productName : String,
+//     price : String,
+//     inventory : String,
+//     image: String,
+// });
 
 var Recipe = mongoose.model('Recipe', {
     name : String,
     creator: String,
     bom: [{material_id:String, quantity:String, active:String}],
+});
+
+var Post = mongoose.model("Post", {
+    title : String,
+    slug : String,
+    body : String,
 });
 
 var routes = [
@@ -52,13 +59,15 @@ var routes = [
     {
         path: '/api/ingredients',
         httpMethod: 'GET',
+        // middleware:[IngredientCtrl.getIngredients]
         middleware: [function (req, res) {
-            Ingredient.find(function(err, ingredients) {
-                    // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-                    if (err)
-                        res.send(err)
-                    res.json(ingredients); // return all ingredients in JSON format
-            });
+            IngredientCtrl.getIngredients(req, res)
+            // IngredientsModel.find(function(err, ingredients) {
+            //         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            //         if (err)
+            //             res.send(err)
+            //         res.json(ingredients); // return all ingredients in JSON format
+            // });
         }],
         accessLevel: accessLevels.public
     },
