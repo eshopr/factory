@@ -4,6 +4,12 @@
 module.exports = {
     translate: function(req, res, next) {
     	console.log(req);
-    	return req;
+    	// return req
+    	try {
+            res.send(req.body);
+        }
+        catch(err) {
+            return res.send(400, err.message);
+        }
     },
 };

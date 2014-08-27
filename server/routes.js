@@ -4,7 +4,7 @@ var _ =           require('underscore')
     , mongoose =  require('mongoose')
     , AuthCtrl =  require('./controllers/auth')
     , UserCtrl =  require('./controllers/user')
-    , TransCtrl =      require('./controllers/translate.js')
+    , TransCtrl = require('./controllers/translate.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
     , accessLevels = require('../client/js/routingConfig').accessLevels;
@@ -217,14 +217,8 @@ var routes = [
     {
         path: '/api/translate',
         httpMethod: 'GET',
-        middleware: [function (req, res) {
-            var thing = 'thing';
-            var wob = TransCtrl.translate(thing);
-
-            // var requestedView = path.join('./', req.url);
-            res.send(wob);
-            // res.render(requestedView);
-        }],
+        middleware: [TransCtrl.translate],
+        // note TransCtrl.translate() produces error, i think becuase it passed the invoked function and not the reference to the function
         accessLevel: accessLevels.public
     },
 
