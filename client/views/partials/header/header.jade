@@ -1,27 +1,20 @@
-.navbar(data-ng-controller="NavCtrl")
+.navbar.custom(data-ng-controller="NavCtrl")
     .navbar-inner
         .container-fluid
             ul.nav.nav-tabs
-                li(data-access-level='accessLevels.anon', active-nav)
-                    a(href='/login') Log in
-                li(data-access-level='accessLevels.anon', active-nav)
-                    a(href='/register') Register
                 li(data-access-level='accessLevels.anon', active-nav)
                     a(href='/') Home
                 li(data-access-level='accessLevels.anon', active-nav)
                     a(href='/blog/posts') Blog
                 li(data-access-level='accessLevels.anon', active-nav)
-                    a(href='/recipes') Graphs
+                    a(href='/contact') Contact
+                li(data-access-level='accessLevels.anon', active-nav)
+                    a(href='/about') About
+                //li(data-access-level='accessLevels.anon', active-nav)
+                    //a(href='/recipes') Graphs
                 li(data-access-level='accessLevels.anon', active-nav='nestedTop')
                     a(href='/private') Private
                 li(data-access-level='accessLevels.admin', active-nav)
                     a(href='/admin') Admin
                 li(data-access-level='accessLevels.admin', active-nav)
                     a(href='/admin') Admin
-
-                div#userInfo.pull-right(data-access-level='accessLevels.anon')
-                    | Welcome&nbsp;
-                    strong {{ user.username }}&nbsp;
-                    span.label(data-ng-class='{"label-info": user.role.title == userRoles.user.title, "label-success": user.role.title == userRoles.admin.title}') {{ user.role.title }}
-                    a(href="", data-ng-click="logout()")
-                        | Log out

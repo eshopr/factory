@@ -24,11 +24,11 @@ html(lang='en', data-ng-app='eshoprShop')
             if (window.location.href.indexOf('#_=_') > 0) {
                 window.location = window.location.href.replace(/#.*/, '');
             }
-    body(data-ng-cloak)
+    body(data-ng-cloak class="factory")
 
         shopheader
 
-        .container.fluid
+        .container.fluid.main-view-container
             .main-view(data-ui-view autoscroll="false")
 
         #alertBox.alert.alert-danger(data-ng-show="error")

@@ -1,4 +1,49 @@
-.footer
-    .row
-        .col-md-12                     
+.footer.container-fluid
+    .container
+        .row
+
+            .col-md-3.center-stuff
+                p 
+                    i.fa.fa-book.wrapped-fa
+                    span.md-3-title Discuss 
+                    span.md-3-p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              
+            .col-md-3.center-stuff
+                p 
+                    i.fa.fa-bar-chart-o.wrapped-fa
+                    span.md-3-title Design 
+                    span.md-3-p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .col-md-3.center-stuff
+                p 
+                    i.fa.fa-tasks.wrapped-fa
+                    span.md-3-title Develop 
+                    span.md-3-p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .col-md-3.center-stuff
+                p 
+                    i.fa.fa-paper-plane.wrapped-fa
+                    span.md-3-title Deploy 
+                    span.md-3-p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    .row.container
+        .col-md-8
             h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        
+        .col-md-4
+            h3 something else
+            div#userInfo(data-access-level='accessLevels.anon')
+                h5 Welcome&nbsp; strong {{ user.username }}&nbsp;
+                ul
+                    li(data-access-level='accessLevels.anon', active-nav)
+                        a(href='/login') Log in
+                    li(data-access-level='accessLevels.anon', active-nav)
+                        a(href='/register') Register
+                    
+            span.label(data-ng-class='{"label-info": user.role.title == userRoles.user.title, "label-success": user.role.title == userRoles.admin.title}') {{ user.role.title }}
+                            a(href="", data-ng-click="logout()")
+                | Log out
+
+                      
+                      
+                      
+                      
+                      
