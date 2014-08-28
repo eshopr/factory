@@ -17,7 +17,9 @@ var eshoprShop = angular.module('eshoprShop', [
     'sidebarBlogController',
     'headerDirective',
     'footerDirective',
-    'textAngular'
+    'textAngular',
+    'productController',
+    'checkoutController',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -100,6 +102,29 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             templateUrl: 'recipes/recipe',
             controller: function($scope, $stateParams) {
                 $scope.foo = $stateParams.recipe_id;
+            }
+        });
+
+    // Shop Routes
+    $stateProvider
+        .state('anon.shop', {
+            url: '/shop/',
+            templateUrl: 'shop/shop',
+            controller: 'productController'
+        })
+        .state('anon.shop.products', {
+            url: 'products/', 
+            // note how it begins with no slash for follow from its ancestor /shop/
+            controller: 'productController',
+            views: {
+                'main': {
+                    templateUrl: 'shop/productlist',
+                },
+                'sidebar': {
+                    templateUrl: 'shop/sidebar',
+                    controller: 'checkoutController'
+                    // templateUrl: 'shop/public/sidebar',
+                }
             }
         });
 

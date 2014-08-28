@@ -19,6 +19,9 @@ html(lang='en', data-ng-app='eshoprShop')
         link(href="/js/blog/blog.css", rel="stylesheet")
         link(href="/js/blog/libs/colorpicker.css", rel="stylesheet")
 
+        // Shop
+        link(href="/js/shop/shop.css", rel="stylesheet")
+
         // This is needed because Facebook login redirects add #_=_ at the end of the URL
         script(type="text/javascript").
             if (window.location.href.indexOf('#_=_') > 0) {
@@ -77,6 +80,11 @@ html(lang='en', data-ng-app='eshoprShop')
         script(src='/components/textAngular/src/textAngular.js')
         script(src='/components/textAngular/src/textAngular-sanitize.js')
         script(src='/components/textAngular/src/textAngularSetup.js')
+
+        // Shop Plugin
+        script(src='/js/shop/product/productController.js')
+        script(src='/js/shop/checkout/checkoutController.js')
+        script(src='/js/shop/libs/simpleCart.js')
 
         // Header
         script(src='/js/header/headerDirective.js')
@@ -138,4 +146,13 @@ html(lang='en', data-ng-app='eshoprShop')
             include views/partials/blog/public/list
         script(type="text/ng-template", id="blog/admin/write")
             include views/partials/blog/admin/write
+        // Shop
+        script(type="text/ng-template", id="shop/shop")
+            include views/partials/shop/shop
+        script(type="text/ng-template", id="shop/sidebar")
+            include views/partials/shop/sidebar
+        script(type="text/ng-template", id="shop/productlist")
+            include views/partials/shop/productlist
+        script(type="text/ng-template", id="shop/product")
+            include views/partials/shop/product
 

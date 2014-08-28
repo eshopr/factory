@@ -1,0 +1,12 @@
+article.post.simpleCart_shelfItem(ng-repeat="product in products")
+
+    h2.item_name 
+        a(href="shop/products/{{product._id}}") {{product.productName}}
+
+    input(type="text" value="1" class="item_Quantity")
+
+    h4.price.item_price &euro; {{product.price}}
+
+    a.item_add(href="javascript:;") Add to Cart
+
+
