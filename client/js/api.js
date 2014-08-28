@@ -71,3 +71,8 @@ eshoprShop.factory("PostFactory", function($http,$resource) {
   };
   return factory
 });
+
+eshoprShop.factory("DownloadsFactory", function($http,$resource) {
+  var factory = {};
+  var url = "/api/downloads";
+});

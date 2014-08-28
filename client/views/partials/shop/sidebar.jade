@@ -4,4 +4,19 @@ span.simpleCart_quantity
     items - 
         span.simpleCart_total
 
+.checkout(ng-show="")
+
 a.simpleCart_checkout(href="javascript:;") Checkout
+
+Checkout 
+input(type="checkbox" ng-model="checked")
+div
+    p Show:
+    div.check-element.animate-show(ng-show="checked")
+        input.form(type="text" ng-model="formData.name" placeholder="Name") 
+        input.form(type="text" ng-model="formData.email" placeholder="Email") 
+div
+    p Hide:
+    div.check-element.animate-show(ng-hide="checked")
+    span I hide when your checkbox is checked.
+

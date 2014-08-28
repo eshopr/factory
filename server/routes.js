@@ -9,7 +9,8 @@ var _ =           require('underscore')
     , IngredientCtrl = require('./controllers/ingredient.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
-    , accessLevels = require('../client/js/routingConfig').accessLevels;
+    , accessLevels = require('../client/js/routingConfig').accessLevels
+    , dlurl = __dirname+'/products';
 
 var Recipe = mongoose.model('Recipe', {
     name : String,
@@ -37,8 +38,32 @@ var routes = [
         httpMethod: 'GET',
         middleware: [function (req, res) {
             // var requestedView = path.join('./', req.url);
-            res.send('Not Cookied API is running');
+            res.send('Not Cookied API is running sgti');
             // res.render(requestedView);
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    // Downloads
+    {
+        path: '/api/downloads',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            res.send('<ul>'
+                + '<li>Download <a href="/api/products/test.txt">amazing.txt</a>.</li>'
+                + '<li>Download <a href="/missing.txt">missing.txt</a>.</li>'
+                + '</ul>')
+        }],
+        accessLevel: accessLevels.public
+    },
+    {
+        path: '/api/products/:file(*)',
+        httpMethod: 'GET',
+        middleware: [function(req, res, next){
+            var file = req.params.file
+            , path = __dirname + '/products' + file;
+
+            res.download(path);
         }],
         accessLevel: accessLevels.public
     },
