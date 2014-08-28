@@ -46,12 +46,12 @@ var routes = [
 
     // Downloads
     {
-        path: '/api/downloads',
+        path: '/api/downloads/:product',
         httpMethod: 'GET',
         middleware: [function (req, res) {
+            var product = req.params.product;
             res.send('<ul>'
-                + '<li>Download <a href="/api/products/test.txt">amazing.txt</a>.</li>'
-                + '<li>Download <a href="/missing.txt">missing.txt</a>.</li>'
+                + '<li>Download <a href="/api/products/'+product+'.txt">'+product+'.txt</a>.</li>'
                 + '</ul>')
         }],
         accessLevel: accessLevels.public
@@ -61,7 +61,7 @@ var routes = [
         httpMethod: 'GET',
         middleware: [function(req, res, next){
             var file = req.params.file
-            , path = __dirname + '/products' + file;
+            , path = __dirname + '/products/' + file;
 
             res.download(path);
         }],
