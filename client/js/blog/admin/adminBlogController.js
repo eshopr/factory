@@ -21,32 +21,33 @@ adminBlogController.controller('adminBlogController', function(
   }
   init();
 
-  // $scope.createPost = function(){
-  //   PostFactory.insertPost($scope.formData).then(function(response) {
+  $scope.createPost = function(){
+  	console.log($scope.formData);
+    PostFactory.insertPost($scope.formData).then(function(response) {
 
-  //     console.log(response);
-  //     $scope.formData = {}; // clear the form so our user is ready to enter another
-  //     $scope.posts = response.data;
-  //   }); 
-  // }
+      console.log(response);
+      $scope.formData = {}; // clear the form so our user is ready to enter another
+      $scope.posts = response.data;
+    }); 
+  }
 
-  // $scope.deletePost = function(id){
-  //   PostFactory.deletePost(id).then(function(response) {
-  //     console.log(response);
-  //     $scope.posts = response.data;
-  //   });
-  //   $scope.$apply
-  // }
-  // $scope.updatePost = function(id){
-  //   // should accept formdata 
-  // }
-  
-  // $scope.showPost = function(id){
-  //   PostFactory.showPost(id).then(function(response) {
-  //     console.log(response);
-  //     $scope.item = response.data;
-  //   }); 
-  // }
+  $scope.deletePost = function(id){
+    PostFactory.deletePost(id).then(function(response) {
+      console.log(response);
+      $scope.posts = response.data;
+    });
+    $scope.$apply
+  }
+  $scope.updatePost = function(id){
+    // should accept formdata 
+  }
+
+  $scope.showPost = function(id){
+    PostFactory.showPost(id).then(function(response) {
+      console.log(response);
+      $scope.item = response.data;
+    }); 
+  }
 
 });
 

@@ -18,14 +18,12 @@ module.exports = {
         });
     },
     addPost: function(req, res) {
-        console.log('addPost:||'+req.body);
+        console.log('addPost:||');//+req.body);
 
         var post = new Post(); 
-        post.sku= req.body.sku;  
-        post.productName= req.body.productName;
-        post.price= req.body.price;
-        post.inventory= req.body.inventory;
-        post.image= req.body.image;
+        post.title= req.body.title;  
+        post.body= req.body.body;
+        console.log(post);
         //save the post and check for errors
         post.save(function(err) {
             if (err)

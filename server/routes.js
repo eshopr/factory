@@ -58,6 +58,9 @@ var routes = [
         path: '/api/posts',
         httpMethod: 'POST',
         middleware: [function (req, res) {
+            console.log('===============req.body----------===============');
+            console.log(req.body);
+            console.log('===============req.body----------===============');
             PostCtrl.addPost(req, res)
         }],
         accessLevel: accessLevels.public

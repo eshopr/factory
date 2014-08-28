@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 var eshoprShop = angular.module('eshoprShop', [
     'ngCookies', 
     'ui.router',
@@ -19,6 +17,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'sidebarBlogController',
     'headerDirective',
     'footerDirective',
+    'textAngular'
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 

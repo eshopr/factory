@@ -13,10 +13,11 @@ html(lang='en', data-ng-app='eshoprShop')
         //- link(href="/views/partials/partials.css", rel="stylesheet")
         link(href="/js/graphs/graphs.css", rel="stylesheet")
         link(href="/recipes/recipes.css", rel="stylesheet")
-        link(href="/components/theme.css", rel="stylesheet")
+        //link(href="/components/theme.css", rel="stylesheet")
 
         // Blog Plugin
         link(href="/js/blog/blog.css", rel="stylesheet")
+        link(href="/js/blog/libs/colorpicker.css", rel="stylesheet")
 
         // This is needed because Facebook login redirects add #_=_ at the end of the URL
         script(type="text/javascript").
@@ -24,7 +25,6 @@ html(lang='en', data-ng-app='eshoprShop')
                 window.location = window.location.href.replace(/#.*/, '');
             }
     body(data-ng-cloak)
-
 
         shopheader
 
@@ -69,16 +69,19 @@ html(lang='en', data-ng-app='eshoprShop')
         script(src='/js/graphs/graphsController.js')
         script(src='/js/graphs/questionsController.js')
         script(src='/js/graphs/responseController.js')
+
         // Blog Plugin
         script(src='/js/blog/admin/adminBlogController.js')
         script(src='/js/blog/public/publicBlogController.js')
+        script(src='/js/blog/libs/bootstrap-colorpicker.js')
+        script(src='/components/textAngular/src/textAngular.js')
+        script(src='/components/textAngular/src/textAngular-sanitize.js')
+        script(src='/components/textAngular/src/textAngularSetup.js')
+
         // Header
         script(src='/js/header/headerDirective.js')
         // Footer
         script(src='/js/footer/footerDirective.js')
-
-
-
 
         script(type="text/ng-template", id="header/header")
             include views/partials/header/header

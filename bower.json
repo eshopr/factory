@@ -11,8 +11,9 @@
     "angular-cookies": "~1.2.12",
     "jQuery":"",
     "gsap":"1.13.1",
-    "angular-ui-chart": "latest"
-    // angular-wysiwyg" 
+    "angular-ui-chart": "latest",
+    "textAngular": "", 
+    "bootstrap-color-picker" : ""
   },
   "devDependencies": {
     "angular-mocks": "~1.2.12"
