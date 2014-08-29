@@ -11,9 +11,9 @@ checkoutController.controller('checkoutController',
           currency: "EUR" // set the currency to pounds sterling
         }
     })// simple callback example
-    .bind( 'beforeCheckout' , function( data ){
-        data.invoiceNumber = "ABC-123456789";
-    });
+;    // .bind( 'beforeCheckout' , function( data ){
+    //     data.invoiceNumber = "ABC-123456789";
+    // });
 
 
 });

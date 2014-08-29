@@ -6,6 +6,7 @@ var _ =           require('underscore')
     , UserCtrl =  require('./controllers/user')
     , TransCtrl = require('./controllers/translate.js')
     , PostCtrl = require('./controllers/blog/post.js')
+    , OrderCtrl = require('./controllers/order/order.js')
     , IngredientCtrl = require('./controllers/ingredient.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
@@ -38,7 +39,7 @@ var routes = [
         httpMethod: 'GET',
         middleware: [function (req, res) {
             // var requestedView = path.join('./', req.url);
-            res.send('Not Cookied API is running sgti');
+            res.send('Not Cookied API is running');
             // res.render(requestedView);
         }],
         accessLevel: accessLevels.public
@@ -57,17 +58,17 @@ var routes = [
         accessLevel: accessLevels.public
     },
     {
-        path: '/api/products/:file(*)',
+        path: '/api/downloads/:file(*)',
         httpMethod: 'GET',
         middleware: [function(req, res, next){
             var file = req.params.file
-            , path = __dirname + '/products/' + file;
+            , path = __dirname + '/downloads/' + file;
 
             res.download(path);
         }],
         accessLevel: accessLevels.public
     },
-    //### POSTS  ####
+        //### POSTS  ####
 
     // Return all posts
     {
@@ -108,6 +109,66 @@ var routes = [
         }],
         accessLevel: accessLevels.public
     },
+
+
+
+
+
+
+
+
+
+
+    //### Orders  ####
+
+    // Return all orders
+    {
+        path: '/api/orders',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            OrderCtrl.getOrders(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+    // Create a new post
+    {
+        path: '/api/orders',
+        httpMethod: 'POST',
+        middleware: [function (req, res) {
+            console.log(req.body);
+            OrderCtrl.addOrder(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/orders/:order_id',
+        httpMethod: 'DELETE',
+        middleware: [function (req, res) {
+            OrderCtrl.deleteOrder(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/orders/:order_id',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            OrderCtrl.getOrder(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+
+
+
+
+
+
+
+
+
+
     //### INGREDIENTS  ####
 
     // Return all ingredients

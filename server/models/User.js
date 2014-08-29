@@ -23,6 +23,14 @@ var users = [
         role:   userRoles.admin
     }
 ];
+// var mongoose = require('mongoose');
+
+// var User = new mongoose.model('User', {
+//     id : String,
+//     username : String,
+//     password : String,
+//     role: 
+// });
 
 module.exports = {
     addUser: function(username, password, role, callback) {
