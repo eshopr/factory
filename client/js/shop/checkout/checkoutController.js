@@ -8,7 +8,7 @@ checkoutController.controller('checkoutController',
         checkout: {
           type: "PayPal",
           email: "binarygeometry@gmail.com",
-          currency: "EUR" // set the currency to pounds sterling
+          currency: "GBP" // set the currency 
         }
     })// simple callback example
 ;    // .bind( 'beforeCheckout' , function( data ){

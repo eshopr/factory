@@ -76,3 +76,27 @@ eshoprShop.factory("DownloadsFactory", function($http,$resource) {
   var factory = {};
   var url = "/api/downloads";
 });
+
+eshoprShop.factory("OrderFactory", function($http,$resource) {
+  var factory = {};
+  var url = "/api/orders";
+
+  factory.getOrders = function () {
+    return $http.get(url);
+  };
+  factory.showOrder = function (id) {
+    return $http.get(url + '/' + id);
+  };
+  factory.insertOrder = function (dataObject) {
+    console.log(dataObject);
+    return $http.post(url, dataObject);
+  };
+  // factory.updatePost = function (id, dataObject) {
+  //   return $http.put(url + '/' + cust.ID, cust)
+  // };
+
+  factory.deleteOrder = function (id) {
+        return $http.delete(url + '/' + id);
+  };
+  return factory
+});

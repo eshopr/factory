@@ -25,15 +25,7 @@ module.exports = {
         });
     },
 
-    {
-        "_id":"53d42536414d22701b000001",
-        "name":"A Customer",
-        "email":"customer@example.com",
-        "address":"123 Address street, Town, Scotland",
-        "message":"This is an enquiry",
-        "order":"jkfldsjdlskfjo",
-        "__v":0
-    }
+    
     addOrder: function(req, res) {
         console.log('addOrder:||');//+req.body);
 

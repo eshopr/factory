@@ -20,6 +20,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'textAngular',
     'productController',
     'checkoutController',
+    'contactController'
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -126,6 +127,11 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
                     // templateUrl: 'shop/public/sidebar',
                 }
             }
+        })
+        .state('anon.contact', {
+            url: '/contact/', 
+            templateUrl: 'shop/contact',
+            controller: 'contactController',
         });
 
     // Blog Routes
