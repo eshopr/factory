@@ -20,7 +20,8 @@ var eshoprShop = angular.module('eshoprShop', [
     'textAngular',
     'productController',
     'checkoutController',
-    'contactController'
+    'contactController',
+    'orderController'
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
