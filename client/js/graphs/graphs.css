@@ -50,16 +50,16 @@ body {
 }
 .footer h3 {
     font-size: 35px;
-padding: 23px;
-color: #C7B9A0;
-text-shadow: 1px 1px 1px #999;
+    padding: 23px;
+    color: #C7B9A0;
+    text-shadow: 1px 1px 1px #999;
 }
 
 /*home*/
 .wrapped-fa {
     float: left;
-font-size: 48px;
-padding: 0 12px 0px 0;
+    font-size: 48px;
+    padding: 0 12px 0px 0;
 /*color:#557088;*/
 }
 .md-3-title {
@@ -68,17 +68,17 @@ padding: 0 12px 0px 0;
     /*color:#557088;*/
 }
 .section-title {
-font-size: 45px;
-padding: 23px;
-color: black;
-text-shadow: 1px 1px 2px#A18FD8;
+    font-size: 45px;
+    padding: 23px;
+    color: black;
+    text-shadow: 1px 1px 2px#A18FD8;
 }
 
 article.post {
     background: white;
-padding: 10px 15px;
-border: 1px solid #c3c3c3;
-margin: 0 0 25px;
+    padding: 10px 15px;
+    border: 1px solid #c3c3c3;
+    margin: 0 0 25px;
 }
 
 article.post {
@@ -87,10 +87,18 @@ article.post {
 
 
 input.form {
-padding: 5px;
-border-radius: 4px;
-border: 2px solid #746C6C;
-width: 100%;
-box-shadow: 0px 0px 1px 1px #C48888;
-margin-bottom:25px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid #746C6C;
+    width: 100%;
+    box-shadow: 0px 0px 1px 1px #C48888;
+    margin-bottom:25px;
+    /*line-height: 1rem;*/
 }
+input.form.textarea {
+    height:120px;
+}
+
+generate random url
+encrypte url
+add url cypher to user model

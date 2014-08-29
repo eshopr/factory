@@ -132,6 +132,11 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             url: '/contact/', 
             templateUrl: 'shop/contact',
             controller: 'contactController',
+        })
+        .state('user.private.orders', {
+            url: 'orders/',
+            templateUrl: "shop/admin/orders",
+            controller: 'orderController'
         });
 
     // Blog Routes
