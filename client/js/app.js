@@ -5,6 +5,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'ui.router',
     'ngResource',
     'ngAnimate',
+    'LocalStorageModule',
     // 'angularFileUpload',
     'ngCookies',
     'cupboardController',

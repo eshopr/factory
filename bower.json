@@ -1,22 +1,25 @@
 {
   "name": "angular-client-side-auth",
   "dependencies": {
-    "angular": "~1.2.12",
+    "angular": "1.2.23",
     "angular-ui-router": "0.2.8-bowratic-tedium",
     "angular-resource": "",
-    "angular-animate" : "1.2.21",
+    "angular-animate": "1.2.21",
     "bootstrap": "~3.1.0",
     "angular-bootstrap": "",
     "font-awesome": "~4.0.3",
-    "angular-cookies": "~1.2.12",
-    "jQuery":"",
-    "gsap":"1.13.1",
+    "angular-cookies": "",
+    "jQuery": "",
+    "gsap": "1.13.1",
     "angular-ui-chart": "latest",
-    "textAngular": "", 
-    "angular-file-upload" : "",
-    "angular-cookies" : ""
+    "textAngular": "",
+    "angular-file-upload": "",
+    "angular-local-storage": ""
   },
   "devDependencies": {
     "angular-mocks": "~1.2.12"
+  },
+  "resolutions": {
+    "angular": "1.2.21"
   }
 }

@@ -4,19 +4,27 @@ checkoutController.controller('checkoutController',
   function(
     $scope,
     $rootScope,
-    $cookieStore
+    $cookieStore,
+    localStorageService
   ){
     $scope.debug = 'js/blog/public/checkoutController';
     $scope.books = ['book1','book2']
-    $scope.cook = $cookieStore.get('downloads');
+    $scope.cook = localStorageService.get('downloads');
     $scope.downloads = [];
-    // $scope.cook = $cookieStore.get('myFavourite');
 
-    $scope.bump = function () {
-        // var lastVal = $cookieStore.get('lastValue');
+    // Example
+  // To add to local storage
 
-        $cookieStore.put('books',$scope.books);
-    }
+  console.log(localStorageService.get('localStorageKey'));
+  console.log();
+  // Read that value back
+  // var value = localStorageService.get('localStorageKey');
+  // To remove a local storage
+  // localStorageService.remove('localStorageKey');
+  // Removes all local storage
+  // localStorageService.clearAll();
+  // You can also play with cookies the same way
+  // localStorageService.cookie.set('localStorageKey','I am a cookie value now');
 
     simpleCart({
         checkout: {
@@ -44,12 +52,13 @@ checkoutController.controller('checkoutController',
             itmNo++;
           }
         }
-        $scope.downloads = outgoing;
-        data.name = "ABC-123456789";
+        // $scope.downloads = outgoing;
+        // data.name = "ABC-123456789";
         // alert(data.invoiceNumber);
         // ipCookie('book', data.invoiceNumber, { expires: 21 });
-        $cookieStore.put('downloads',$scope.downloads);
-        console.log($scope.downloads);
+        localStorageService.set('downloads',outgoing);
+        //localStorageService.set('localStorageKey','Add this!');
+        // console.log($scope.downloads);
         return false;
     });
 
