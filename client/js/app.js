@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // my armpit cried
 
 var eshoprShop = angular.module('eshoprShop', [
     'ngCookies', 

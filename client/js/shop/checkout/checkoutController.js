@@ -37,7 +37,9 @@ checkoutController.controller('checkoutController',
         // console.log(data);
         var outgoing = []; // create object to hold array of downloadable purchases
         var dt = data;
-        var itmNo = 1
+        var itmNo = 1;
+        console.log('beforeCheckout');
+        console.log(data);
         for (key in dt) {
           var ref = 'item_name_'+itmNo; // This our key, it is used against a dictionary
           var obj = dt[ref];
