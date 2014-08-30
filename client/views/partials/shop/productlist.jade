@@ -1,12 +1,26 @@
-article.post.simpleCart_shelfItem(ng-repeat="product in products")
+article.post.simpleCart_shelfItem
 
-    h2.item_name 
-        a(href="shop/products/{{product._id}}") {{product.productName}}
+    h2.item_name Parable of the Fireman
+        //a(href="shop/products/{{product._id}}") {{product.productName}}
+    //img(src="/images/parable.png")
 
-    input(type="text" value="1" class="item_Quantity")
+    h4.price.item_price 0.10 &euro;
 
-    h4.price.item_price {{product.price}} &euro;
+    div.description
+        My First book
 
     a.item_add(href="javascript:;") Add to Cart
 
+//(ng-repeat="product in products")
+article.post.simpleCart_shelfItem
 
+    h2.item_name A- Z of Graffiti
+        //a(href="shop/products/{{product._id}}") {{product.productName}}
+    //img(src="/images/parable.png")
+
+    h4.price.item_price 0.10 &euro;
+
+    div.description
+        My First book
+
+    a.item_add(href="javascript:;") Add to Cart

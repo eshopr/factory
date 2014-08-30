@@ -109,6 +109,19 @@ button.form.special {
 .login.right {
     float: right;
 }
-generate random url
-encrypte url
-add url cypher to user model
+
+
+.headerRow {
+    display:none;
+}
+
+.itemRow {
+    border-bottom:1px solid green;
+}
+.item-decrement, .item-quantity {
+    float:left;
+}
+.options {
+    border-top:1px solid green;
+    padding:10px 0;
+}

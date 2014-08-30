@@ -6,6 +6,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'ngResource',
     'ngAnimate',
     // 'angularFileUpload',
+    'ngCookies',
     'cupboardController',
     'pageController',
     'clockController',
@@ -127,6 +128,19 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
                     templateUrl: 'shop/sidebar',
                     controller: 'checkoutController'
                     // templateUrl: 'shop/public/sidebar',
+                }
+            }
+        })
+        .state('anon.shop.thanks', {
+            url: 'thanks/',
+            views: {
+                'main': {
+                    templateUrl: 'shop/thanks',
+                    controller: 'checkoutController',
+                },
+                'sidebar': {
+                    templateUrl: 'shop/downloads',
+                    controller: 'checkoutController',
                 }
             }
         })

@@ -6,6 +6,7 @@ var productController = angular.module('productController',[]);
 productController.controller('productController',function(
   $scope, 
   $http, 
+  $resource,
   IngredientFactory
   ) {
     $scope.debug = 'js/blog/public/productController';

@@ -13,7 +13,8 @@
     "gsap":"1.13.1",
     "angular-ui-chart": "latest",
     "textAngular": "", 
-    "angular-file-upload" : ""
+    "angular-file-upload" : "",
+    "angular-cookies" : ""
   },
   "devDependencies": {
     "angular-mocks": "~1.2.12"

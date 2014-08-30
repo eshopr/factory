@@ -1,22 +1,23 @@
-h3 This is where the checkout is
+article.post
+    h3 CHECKOUT
 
-span.simpleCart_quantity
-    items - 
+    span.simpleCart_items
+    hr
+    span.simpleCart_quantity
+    hr
+    h5 Total &euro;
         span.simpleCart_total
 
-.checkout(ng-show="")
+    hr
+    a.simpleCart_checkout(href="javascript:;") Checkout
 
-a.simpleCart_checkout(href="javascript:;") Checkout
 
-Checkout 
-input(type="checkbox" ng-model="checked")
-div
-    p Show:
-    div.check-element.animate-show(ng-show="checked")
-        input.form(type="text" ng-model="formData.name" placeholder="Name") 
-        input.form(type="text" ng-model="formData.email" placeholder="Email") 
-div
-    p Hide:
-    div.check-element.animate-show(ng-hide="checked")
-    span I hide when your checkbox is checked.
+
+    a.simpleCart_empty(href="javascript:;")
+
+
+    //input(type="checkbox" ng-model="checked")
+
+    //.checkout(ng-show="")
+
 
