@@ -99,6 +99,16 @@ input.form.textarea {
     height:120px;
 }
 
+.posrel {
+    position:relative;
+}
+button.form.special {
+
+}
+
+.login.right {
+    float: right;
+}
 generate random url
 encrypte url
 add url cypher to user model

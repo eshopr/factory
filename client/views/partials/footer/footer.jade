@@ -28,19 +28,45 @@
         .col-md-8
             h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         
-        .col-md-4
-            h3 something else
-            div#userInfo(data-access-level='accessLevels.anon')
-                h5 Welcome&nbsp; strong {{ user.username }}&nbsp;
-                ul
-                    li(data-access-level='accessLevels.anon', active-nav)
-                        a(href='/login') Log in
-                    li(data-access-level='accessLevels.anon', active-nav)
-                        a(href='/register') Register
-                    
-            span.label(data-ng-class='{"label-info": user.role.title == userRoles.user.title, "label-success": user.role.title == userRoles.admin.title}') {{ user.role.title }}
-                            a(href="", data-ng-click="logout()")
-                | Log out
+        .col-md-4(ng-controller="LoginCtrl")
+            form.form-horizontal(ng-submit="login()", name="loginForm", role="form")
+                .form-group
+                    h3 Your Bullshit Here
+                    input.form(type="text", data-ng-model="username", placeholder="Username", name="username", required, autofocus)
+                    input.form(type="password", data-ng-model="password", placeholder="Password", name="password", required)
+                    //.checkbox
+                        //label(for="rememberme").checkbox
+                            //input(type="checkbox", data-ng-model="rememberme", name="rememberme")
+                            | //Remember me
+
+                    button.form.special(type="submit", data-ng-disabled="loginForm.$invalid") Log in
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                //div#userInfo(data-access-level='accessLevels.anon')
+                    //h5 Welcome&nbsp; strong {{ user.username }}&nbsp;
+                    //ul
+                        //li(data-access-level='accessLevels.anon', active-nav)
+                            //a(href='/login') Log in
+                        //li(data-access-level='accessLevels.anon', active-nav)
+                            //a(href='/register') Register
+                        
+                //span.label(data-ng-class='{"label-info": user.role.title == userRoles.user.title, "label-success": //user.role.title == userRoles.admin.title}') {{ user.role.title }}
+                                //a(href="", data-ng-click="logout()")
+                    //| Log out
 
                       
                       

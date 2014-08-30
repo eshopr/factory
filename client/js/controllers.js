@@ -9,7 +9,7 @@ eshoprShop.controller('NavCtrl', ['$rootScope', '$scope', '$location', 'Auth', f
 
     $scope.logout = function() {
         Auth.logout(function() {
-            $location.path('/login');
+            $location.path('/');
         }, function() {
             $rootScope.error = "Failed to logout";
         });
@@ -27,7 +27,7 @@ eshoprShop.controller('LoginCtrl',
                 rememberme: $scope.rememberme
             },
             function(res) {
-                $location.path('/');
+                $location.path('/private/');
             },
             function(err) {
                 $rootScope.error = "Failed to login";

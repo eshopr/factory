@@ -10,18 +10,24 @@ var User
     , userRoles =       require('../../client/js/routingConfig').userRoles;
 
 var users = [
+    // {
+    //     id:         1,
+    //     username:   "user",
+    //     password:   "123",
+    //     role:   userRoles.user
+    // },
     {
         id:         1,
-        username:   "user",
-        password:   "123",
+        username:   "joel",
+        password:   "readytogo",
         role:   userRoles.user
     },
-    {
-        id:         2,
-        username:   "admin",
-        password:   "123",
-        role:   userRoles.admin
-    }
+    // {
+    //     id:         2,
+    //     username:   "admin",
+    //     password:   "123",
+    //     role:   userRoles.admin
+    // }
 ];
 // var mongoose = require('mongoose');
 

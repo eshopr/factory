@@ -5,6 +5,7 @@ adminBlogController.controller('adminBlogController', function(
   $resource,
   $scope, 
   $http, 
+  FileUploader,
   PostFactory
   ) { 
   // we now must find some way to put ingredients in the 
@@ -12,6 +13,10 @@ adminBlogController.controller('adminBlogController', function(
   $scope.posts = {};
   $scope.item = {};
   $scope.formData = {};
+  // $scope.uploader = new FileUploader();
+  // $scope.uploaderOpts = {
+  //   url: '/api/uploads'
+  // }
 
   function init() {
     PostFactory.getPosts().then(function(response) {

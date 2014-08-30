@@ -5,6 +5,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'ui.router',
     'ngResource',
     'ngAnimate',
+    // 'angularFileUpload',
     'cupboardController',
     'pageController',
     'clockController',
@@ -51,7 +52,7 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             abstract: true,
             template: '<ui-view autoscroll="false"/>',
             data: {
-                access: access.anon
+                access: access.public
             }
         })
         // Home
@@ -173,7 +174,7 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             abstract: true,
             template: '<ui-view autoscroll="false"/>',
             data: {
-                access: access.anon
+                access: access.public
             }
         })
         // Private

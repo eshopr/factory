@@ -68,6 +68,21 @@ var routes = [
         }],
         accessLevel: accessLevels.public
     },
+
+    // Uploads
+    {
+        path: '/api/uploads',
+        httpMethod: 'GET',
+        middleware: [function(req, res, next){
+           console.log(req.files);
+        }],
+        accessLevel: accessLevels.public
+    },
+
+
+
+
+
         //### POSTS  ####
 
     // Return all posts
@@ -84,9 +99,9 @@ var routes = [
         path: '/api/posts',
         httpMethod: 'POST',
         middleware: [function (req, res) {
-            console.log('===============req.body----------===============');
+
             console.log(req.body);
-            console.log('===============req.body----------===============');
+            console.log(req.files);
             PostCtrl.addPost(req, res)
         }],
         accessLevel: accessLevels.public
@@ -130,7 +145,7 @@ var routes = [
         }],
         accessLevel: accessLevels.public
     },
-    // Create a new post
+    // Create a new order
     {
         path: '/api/orders',
         httpMethod: 'POST',

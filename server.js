@@ -21,6 +21,7 @@ app.set('view engine', 'jade');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(bodyParser({uploadDir:'./client/css'}));
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(cookieParser());
