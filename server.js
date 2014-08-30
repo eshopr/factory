@@ -12,7 +12,7 @@ var express =           require('express')
     , csrf =            require('csurf')
     , User =            require('./server/models/User.js');
 
-mongoose.connect('mongodb://admin:cthulhu6785342@novus.modulusmongo.net:27017/i9nehudE');   // connect to mongoDB database on modulus.io
+mongoose.connect('mongodb://happycustomer:enteranewonehere64756@novus.modulusmongo.net:27017/i9nehudE');   // connect to mongoDB database on modulus.io
 
 var app = module.exports = express();
 

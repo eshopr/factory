@@ -1,0 +1,27 @@
+    {
+        id:         1,
+        username:   "happycustomer",
+        password:   "readytogo",
+        role:   userRoles.user
+    },
+factory/server/models/User.js
+    onmodulus.io
+user    eshopr
+pass    eshopr64756
+
+factory/server/server.js
+
+    mongoose.connect('mongodb://happycustomer:enteranewonehere64756@novus.modulusmongo.net:27017/i9nehudE');   // connect to mongoDB database on modulus.io
+
+bitbucket.com 
+    eshopr
+    eshopr64756
+
+    simpleCart({
+        checkout: {
+          type: "PayPal",
+          email: "eshoprworkshop@gmail.com",
+          currency: "GBP" // set the currency 
+        }
+    });
+

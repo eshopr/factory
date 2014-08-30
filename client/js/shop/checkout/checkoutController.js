@@ -9,14 +9,33 @@ checkoutController.controller('checkoutController',
   ){
     $scope.debug = 'js/blog/public/checkoutController';
     // $scope.books = ['book1','book2']
-    $scope.cook = localStorageService.get('downloads');
+            function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+$scope.storageitem = makeid();
+    $scope.cook = localStorageService.get('downlo');//$scope.storageitem);
+console.log('1');
+console.log($scope.cook);
     $scope.downloads = [];
+    $scope.unscrambled = []; // create object to hold array of downloadable purchases
 
     // Example
   // To add to local storage
 
-  console.log(localStorageService.get('localStorageKey'));
+  // console.log(localStorageService.get('localStorageNewKey'));
   console.log();
+  // window.onbeforeunload = function() {
+  // localStorage.removeItem(key);
+  // return '';
+// };
+// localStorageService.remove('downloads')
   // Read that value back
   // var value = localStorageService.get('localStorageKey');
   // To remove a local storage
@@ -35,7 +54,7 @@ checkoutController.controller('checkoutController',
     });
     simpleCart.bind( 'beforeCheckout' , function( data ){
         // console.log(data);
-        var outgoing = []; // create object to hold array of downloadable purchases
+alert('test');
         var dt = data;
         var itmNo = 1;
         console.log('beforeCheckout');
@@ -50,18 +69,21 @@ checkoutController.controller('checkoutController',
           // console.log('dsf'+dt[ref]);
           if(key === ref) {
             console.log(value);
-            outgoing.push(value);
+            $scope.unscrambled.push(value);
             itmNo++;
           }
         }
-        // $scope.downloads = outgoing;
-        // data.name = "ABC-123456789";
-        // alert(data.invoiceNumber);
-        // ipCookie('book', data.invoiceNumber, { expires: 21 });
-        localStorageService.set('downloads',outgoing);
-        //localStorageService.set('localStorageKey','Add this!');
+
+        localStorageService.set('downlo',$scope.unscrambled);
+        $scope.unscrambled = [];
+        console.log('1');
+console.log($scope.cook);
+        // $scope.unscrambled
+
+        // localStorageService.set('localStorageKey','Add this!');
         // console.log($scope.downloads);
         // return false;
+        return false;
     });
 
 

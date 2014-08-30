@@ -52,8 +52,9 @@ var routes = [
         middleware: [function (req, res) {
             var product = req.params.product;
             res.send('<ul>'
-                + '<li>Download <a href="/api/products/'+product+'.txt" target="blank" download="'+product+'">'+product+'</a>.</li>'
-                + '</ul>')
+                + '<li>Download <a href="/api/products/'+product+' target="blank" download="'+product+'">'+product+'</a>.</li>'
+                + '</ul><p>pdf downloads are as of yet unsupported please email eshopworkshop@gmail and we will send your product right away'
+            );
         }],
         accessLevel: accessLevels.public
     },
@@ -65,9 +66,11 @@ var routes = [
             console.log(file);
             file.replace(/.txt/g, "");
             console.log(file);
-            var dictionary = [
-                {'A- Z of Graffiti':'lilbookofgraf.pdf'}
-            ]
+            var dictionary = {
+                'aptitude-is-abundance.pdf':'totallyscrambled.pdf',
+                'this-website.txt':'enteranewonehere64756.txt'
+            }
+            file = dictionary[file];
             var path = __dirname + '/downloads/' + file;
 
             res.download(path);
