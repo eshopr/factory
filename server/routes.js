@@ -52,7 +52,7 @@ var routes = [
         middleware: [function (req, res) {
             var product = req.params.product;
             res.send('<ul>'
-                + '<li>Download <a href="/api/products/'+product+'.txt">'+product+'.txt</a>.</li>'
+                + '<li>Download <a href="/api/products/'+product+'.txt" target="blank" download="'+product+'">'+product+'</a>.</li>'
                 + '</ul>')
         }],
         accessLevel: accessLevels.public
@@ -61,8 +61,14 @@ var routes = [
         path: '/api/downloads/:file(*)',
         httpMethod: 'GET',
         middleware: [function(req, res, next){
-            var file = req.params.file
-            , path = __dirname + '/downloads/' + file;
+            var file = req.params.file;
+            console.log(file);
+            file.replace(/.txt/g, "");
+            console.log(file);
+            var dictionary = [
+                {'A- Z of Graffiti':'lilbookofgraf.pdf'}
+            ]
+            var path = __dirname + '/downloads/' + file;
 
             res.download(path);
         }],
@@ -78,6 +84,8 @@ var routes = [
         }],
         accessLevel: accessLevels.public
     },
+
+
 
 
 

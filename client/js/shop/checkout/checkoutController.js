@@ -8,7 +8,7 @@ checkoutController.controller('checkoutController',
     localStorageService
   ){
     $scope.debug = 'js/blog/public/checkoutController';
-    $scope.books = ['book1','book2']
+    // $scope.books = ['book1','book2']
     $scope.cook = localStorageService.get('downloads');
     $scope.downloads = [];
 
@@ -61,7 +61,7 @@ checkoutController.controller('checkoutController',
         localStorageService.set('downloads',outgoing);
         //localStorageService.set('localStorageKey','Add this!');
         // console.log($scope.downloads);
-        return false;
+        // return false;
     });
 
 
