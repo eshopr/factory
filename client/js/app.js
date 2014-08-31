@@ -24,7 +24,8 @@ var eshoprShop = angular.module('eshoprShop', [
     'productController',
     'checkoutController',
     'contactController',
-    'orderController'
+    'orderController',
+    'listingController',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -189,7 +190,7 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             abstract: true,
             template: '<ui-view autoscroll="false"/>',
             data: {
-                access: access.public
+                access: access.user
             }
         })
         // Private

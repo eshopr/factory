@@ -119,11 +119,9 @@ var routes = [
         httpMethod: 'POST',
         middleware: [function (req, res) {
 
-            console.log(req.body);
-            console.log(req.files);
             PostCtrl.addPost(req, res)
         }],
-        accessLevel: accessLevels.public
+        accessLevel: accessLevels.user
     },
 
     {
@@ -132,7 +130,7 @@ var routes = [
         middleware: [function (req, res) {
             PostCtrl.deletePost(req, res)
         }],
-        accessLevel: accessLevels.public
+        accessLevel: accessLevels.user
     },
 
     {
@@ -141,7 +139,7 @@ var routes = [
         middleware: [function (req, res) {
 
         }],
-        accessLevel: accessLevels.public
+        accessLevel: accessLevels.user
     },
 
 

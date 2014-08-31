@@ -22,6 +22,12 @@ html(lang='en', data-ng-app='eshoprShop')
         // Shop
         link(href="/js/shop/shop.css", rel="stylesheet")
 
+        // Listing
+        link(href="/js/listing/listing.css, rel="stylesheet")
+        link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.css, rel="stylesheet")
+        link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.theme.css, rel="stylesheet")
+        link(href="/js/shop/shop.css, rel="stylesheet")
+
         // This is needed because Facebook login redirects add #_=_ at the end of the URL
         script(type="text/javascript").
             if (window.location.href.indexOf('#_=_') > 0) {
@@ -90,6 +96,17 @@ html(lang='en', data-ng-app='eshoprShop')
         script(src='/js/shop/libs/simpleCart.js')
         script(src='/components/angular-cookies/angular-cookies.js')
         script(src='/components/angular-local-storage/angular-local-storage.js')
+
+        // Listing Plugin
+        script(src="/js/listing/listingController.js")
+        script(src="/js/listing/listingModel.js")
+        script(src="/components/simpleWeather/jquery.simpleWeather.js")
+        script(src="/components/angular-ui-sortable")
+        script(src="/js/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.js")
+        script(src="/js/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.structure.js")
+
+        //script(src="js/listing/tools/toolController.js")
+        //script(src="js/listing/libs/.js")
 
         // Header
         script(src='/js/header/headerDirective.js')
@@ -168,5 +185,17 @@ html(lang='en', data-ng-app='eshoprShop')
             include views/partials/shop/thanks
         script(type="text/ng-template", id="shop/downloads")
             include views/partials/shop/downloads
-
+        // Listings
+        script(type="text/ng-template", id="listings/listing")
+            include view/views/partials/listing/listing
+        script(type="text/ng-template", id="listings/add")
+            include view/views/partials/listing/add
+        script(type="text/ng-template", id="listing/tools/conditions")
+            include view/views/partials/listing/tools/conditions
+        script(type="text/ng-template", id="listing/tools/localities")
+            include view/views/partials/listing/tools/localities
+        script(type="text/ng-template", id="listing/tools/tool")
+            include view/views/partials/listing/add
+        script(type="text/ng-template" id="listing/tools/layout")
+            include view/views/partials/listing/tools/layout
 
