@@ -17,7 +17,7 @@ var users = [
     //     role:   userRoles.user
     // },
     {
-        id:         1,
+        id:         3,
         username:   "happycustomer",
         password:   "readytogo",
         role:   userRoles.user

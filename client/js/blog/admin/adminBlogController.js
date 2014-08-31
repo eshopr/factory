@@ -5,7 +5,7 @@ adminBlogController.controller('adminBlogController', function(
   $resource,
   $scope, 
   $http, 
-  FileUploader,
+  // FileUploader,
   PostFactory
   ) { 
   // we now must find some way to put ingredients in the 

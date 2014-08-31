@@ -22,7 +22,7 @@ checkoutController.controller('checkoutController',
 $scope.storageitem = makeid();
     $scope.cook = localStorageService.get('downlo');//$scope.storageitem);
 console.log('1');
-console.log($scope.cook);
+console.log($scope.cook); 
     $scope.downloads = [];
     $scope.unscrambled = []; // create object to hold array of downloadable purchases
 
@@ -49,12 +49,13 @@ console.log($scope.cook);
         checkout: {
           type: "PayPal",
           email: "eshoprworkshop@gmail.com",
-          currency: "GBP" // set the currency 
+          currency: "GBP", // set the currency 
+          success: "shop/thanks"
         }
     });
     simpleCart.bind( 'beforeCheckout' , function( data ){
         // console.log(data);
-alert('test');
+// alert('test');
         var dt = data;
         var itmNo = 1;
         console.log('beforeCheckout');
@@ -83,7 +84,7 @@ console.log($scope.cook);
         // localStorageService.set('localStorageKey','Add this!');
         // console.log($scope.downloads);
         // return false;
-        return false;
+        // return false;
     });
 
 

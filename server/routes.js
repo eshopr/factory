@@ -51,9 +51,16 @@ var routes = [
         httpMethod: 'GET',
         middleware: [function (req, res) {
             var product = req.params.product;
+            // console.log(product);
+            // product.replace(/.txt/g, "");
+            console.log(product);
+            var dictionary = {
+                'aptitude-is-abundance.pdf':'totallyscrambled.pdf',
+                'this-website.txt':'enteranewonehere64756.txt'
+            }
             res.send('<ul>'
                 + '<li>Download <a href="/api/products/'+product+' target="blank" download="'+product+'">'+product+'</a>.</li>'
-                + '</ul><p>pdf downloads are as of yet unsupported please email eshopworkshop@gmail and we will send your product right away'
+                + '</ul><p>pIf you have a problem with downloading your files contact eshopworkshop@gmail and we will send your product right away'
             );
         }],
         accessLevel: accessLevels.public
@@ -68,7 +75,8 @@ var routes = [
             console.log(file);
             var dictionary = {
                 'aptitude-is-abundance.pdf':'totallyscrambled.pdf',
-                'this-website.txt':'enteranewonehere64756.txt'
+                'this-website.txt':'enteranewonehere64756.txt',
+                'little-book-of-scribbles.pdf': 'totallyscrambled.pdf'
             }
             file = dictionary[file];
             var path = __dirname + '/downloads/' + file;

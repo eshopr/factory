@@ -9,7 +9,7 @@ var Ingredient = mongoose.model('Ingredient', {
 });
 module.exports = {
 	getIngredients: function(req, res) {
-		console.log('getIngredient'+req, res);
+		// console.log('getIngredient'+req, res);
 
         Ingredient.find(function(err, ingredients) {
                 // if there is an error retrieving, send the error. nothing after res.send(err) will execute
