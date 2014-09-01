@@ -8,6 +8,7 @@ var _ =           require('underscore')
     , PostCtrl = require('./controllers/blog/post.js')
     , OrderCtrl = require('./controllers/order/order.js')
     , IngredientCtrl = require('./controllers/ingredient.js')
+    , ListingCtrl = require('./controllers/listing.js')
     , User =      require('./models/User.js')
     , userRoles = require('../client/js/routingConfig').userRoles
     , accessLevels = require('../client/js/routingConfig').accessLevels
@@ -95,6 +96,53 @@ var routes = [
         }],
         accessLevel: accessLevels.public
     },
+
+
+
+
+        //### LISTINGS  ####
+
+    // Return all listings
+    {
+        path: '/api/listings',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            ListingCtrl.getListings(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+    // Create a new post
+    {
+        path: '/api/listings',
+        httpMethod: 'POST',
+        middleware: [function (req, res) {
+            console.log('actions');
+             ListingCtrl.addListing(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/listings/:listing_id',
+        httpMethod: 'DELETE',
+        middleware: [function (req, res) {
+            ListingCtrl.deleteListing(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+    {
+        path: '/api/listings/:listing_id',
+        httpMethod: 'GET',
+        middleware: [function (req, res) {
+            ListingCtrl.getListing(req, res)
+        }],
+        accessLevel: accessLevels.public
+    },
+
+
+
+
 
 
 

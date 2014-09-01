@@ -27,6 +27,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'orderController',
     'listingController',
     'uiController',
+    'addListingController',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -240,6 +241,15 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             'right':{
               templateUrl:'listing/ui',
               controller: 'uiController'
+              }
+            }
+        })
+        .state('anon.listings.add', {
+          url: 'add/',
+          views:{
+            'right':{
+              templateUrl:'listing/add',
+              controller: 'addListingController'
               }
             }
         });

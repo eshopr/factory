@@ -100,7 +100,8 @@ html(lang='en', data-ng-app='eshoprShop')
         // Listing Plugin
         script(src="/js/listing/listingController.js")
         script(src="/js/listing/uiController.js")
-        //script(src="/js/listing/listingModel.js")
+        script(src="/js/listing/addListingController.js")
+        script(src="/js/listing/listingModel.js")
         script(src="/components/simpleWeather/jquery.simpleWeather.js")
         script(src="/js/listing/libs/sortable.js")
         script(src="/js/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.js")
@@ -190,6 +191,9 @@ html(lang='en', data-ng-app='eshoprShop')
             include views/partials/listing/layout
         script(type="text/ng-template", id="listing/ui")
             include views/partials/listing/ui
+        script(type="text/ng-template", id="listing/add")
+            include views/partials/listing/add
+        //script(type="text/ng-template", id="listing
         //script(type="text/ng-template", id="listing/tools/conditions")
             //include views/partials/listing/tools/conditions
         //script(type="text/ng-template", id="listing/tools/localities")
