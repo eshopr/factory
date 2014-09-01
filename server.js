@@ -11,8 +11,9 @@ var express =           require('express')
     , session =         require('express-session')
     , csrf =            require('csurf')
     , User =            require('./server/models/User.js');
+var credentials = require('./credentials');
 
-mongoose.connect('mongodb://happycustomer:enteranewonehere64756@novus.modulusmongo.net:27017/i9nehudE');   // connect to mongoDB database on modulus.io
+mongoose.connect(credentials.mongoose);   // connect to mongoDB database on modulus.io
 
 var app = module.exports = express();
 
