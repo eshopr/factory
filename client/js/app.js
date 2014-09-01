@@ -228,10 +228,19 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
 
     // Listing routes
      $stateProvider
-        .state('anon.listing', {
-          url: '/listing/:instanceID',
+        .state('anon.listings', {
+          url: '/listings/',
           templateUrl: 'listing/layout',
           controller: 'listingController'
+        })
+        .state('anon.listings.listing', {
+          url: 'listing/:instanceID',
+          views:{
+            'right':{
+              templateUrl:'listing/ui',
+              controller: 'listingController'
+              }
+            }
         });
         // .state('anon.listing.edit', {
         //   views:{
