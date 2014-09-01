@@ -226,6 +226,22 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
             }
         });
 
+    // Listing routes
+     $stateProvider
+        .state('anon.listing', {
+          url: '/listing/:instanceID',
+          templateUrl: 'listing/layout',
+          controller: 'listingController'
+        });
+        // .state('anon.listing.edit', {
+        //   views:{
+        //     'right':{
+        //       templateUrl:'listing/ui.jade',
+        //       controller: 'listingController'
+        //       }
+        //   }
+    // });
+
     // Admin routes
     $stateProvider
         .state('admin', {

@@ -10,8 +10,8 @@ var express =           require('express')
     , cookieSession =   require('cookie-session')
     , session =         require('express-session')
     , csrf =            require('csurf')
-    , User =            require('./server/models/User.js');
-var credentials = require('./credentials');
+    , User =            require('./server/models/User.js')
+    , credentials =     require('./credentials');
 
 mongoose.connect(credentials.mongoose);   // connect to mongoDB database on modulus.io
 

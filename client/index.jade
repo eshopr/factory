@@ -17,16 +17,16 @@ html(lang='en', data-ng-app='eshoprShop')
 
         // Blog Plugin
         link(href="/js/blog/blog.css", rel="stylesheet")
-        link(href="/js/blog/libs/colorpicker.css", rel="stylesheet")
+        //link(href="/js/blog/libs/colorpicker.css", rel="stylesheet")
 
         // Shop
         link(href="/js/shop/shop.css", rel="stylesheet")
 
         // Listing
-        link(href="/js/listing/listing.css, rel="stylesheet")
-        link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.css, rel="stylesheet")
-        link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.theme.css, rel="stylesheet")
-        link(href="/js/shop/shop.css, rel="stylesheet")
+        link(href="/js/listing/listing.css", rel="stylesheet")
+        //link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.css", rel="stylesheet")
+        //link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.theme.css", rel="stylesheet")
+        //link(href="/js/listing/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.structure.css", rel="stylesheet")
 
         // This is needed because Facebook login redirects add #_=_ at the end of the URL
         script(type="text/javascript").
@@ -99,11 +99,10 @@ html(lang='en', data-ng-app='eshoprShop')
 
         // Listing Plugin
         script(src="/js/listing/listingController.js")
-        script(src="/js/listing/listingModel.js")
+        //script(src="/js/listing/listingModel.js")
         script(src="/components/simpleWeather/jquery.simpleWeather.js")
-        script(src="/components/angular-ui-sortable")
+        script(src="/js/listing/libs/sortable.js")
         script(src="/js/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.js")
-        script(src="/js/listing/libs/jquery-ui-1.11.1.custom/jquery-ui.structure.js")
 
         //script(src="js/listing/tools/toolController.js")
         //script(src="js/listing/libs/.js")
@@ -186,16 +185,16 @@ html(lang='en', data-ng-app='eshoprShop')
         script(type="text/ng-template", id="shop/downloads")
             include views/partials/shop/downloads
         // Listings
-        script(type="text/ng-template", id="listings/listing")
-            include view/views/partials/listing/listing
-        script(type="text/ng-template", id="listings/add")
-            include view/views/partials/listing/add
-        script(type="text/ng-template", id="listing/tools/conditions")
-            include view/views/partials/listing/tools/conditions
-        script(type="text/ng-template", id="listing/tools/localities")
-            include view/views/partials/listing/tools/localities
-        script(type="text/ng-template", id="listing/tools/tool")
-            include view/views/partials/listing/add
-        script(type="text/ng-template" id="listing/tools/layout")
-            include view/views/partials/listing/tools/layout
+        script(type="text/ng-template", id="listing/layout")
+            include views/partials/listing/layout
+        script(type="text/ng-template", id="listing/ui")
+            include views/partials/listing/ui
+        //script(type="text/ng-template", id="listing/tools/conditions")
+            //include views/partials/listing/tools/conditions
+        //script(type="text/ng-template", id="listing/tools/localities")
+            //include views/partials/listing/tools/localities
+        //script(type="text/ng-template", id="listing/tools/tool")
+            //include views/partials/listing/add
+        //script(type="text/ng-template" id="listing/tools/layout")
+            //include views/partials/listing/tools/layout
 
