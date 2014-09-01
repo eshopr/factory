@@ -55,7 +55,6 @@ listingController.controller('listingController', function(
     ]
 
     $scope.debug = 'js/listing/listingController';
-    $scope.listingID = $stateParams.instanceID;
 
 });
 

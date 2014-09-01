@@ -26,6 +26,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'contactController',
     'orderController',
     'listingController',
+    'uiController',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
@@ -238,7 +239,7 @@ eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
           views:{
             'right':{
               templateUrl:'listing/ui',
-              controller: 'listingController'
+              controller: 'uiController'
               }
             }
         });
