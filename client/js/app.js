@@ -28,6 +28,7 @@ var eshoprShop = angular.module('eshoprShop', [
     'listingController',
     'uiController',
     'addListingController',
+    'weatherDirective',
     ]);
 
 eshoprShop.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
